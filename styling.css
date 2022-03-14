@@ -1,17 +1,18 @@
 @font-face {
     font-family: 'Spartan';
-    src: url("Fonts/Spartan-Regular.ttf");
+    src: url(/Fonts/Spartan-Regular.ttf);
 }
 
 h1 {
-    font-family: "Spartan";
-    font-size: 22px,
+    font-family: Spartan;
+    font-size: 24px,
 }
 
 h2 {
-    font-size: 16px,
+    font-size: 20px,
 }
 
 p {
+    font-size: 16px;
     color: red,
 }
