@@ -13,6 +13,7 @@
 /* Body */
 body {
     font-family: Spartan;
+    text-align: center;
     background-color: rgb(66, 66, 66);
     color: white;
 }
@@ -21,15 +22,28 @@ body {
 h1 {
     font-family: Spartan-Bold;
     font-size: 32px;
-    text-align: center;
 }
 
 h2 {
     font-size: 24px;
-    text-align: center;
 }
 
 p {
     font-size: 16px;
-    text-align: justify;
+}
+
+a {
+    color: blueviolet
+}
+
+a:hover {
+    font-size: 18px;
+    color: blue
+}
+
+footer {
+    position: absolute;
+    right: 1%;
+    bottom: 0%;
+    text-align: right;
 }
