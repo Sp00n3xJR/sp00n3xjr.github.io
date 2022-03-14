@@ -3,8 +3,14 @@
     src: url(/Fonts/Spartan-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Spartan-Bold';
+    src: url(/Fonts/Spartan-Bold.ttf);
+    font-weight: bold;
+}
+
 h1 {
-    font-family: Spartan;
+    font-family: Spartan-Bold;
     font-size: 24px,
 }
 
@@ -14,5 +20,6 @@ h2 {
 
 p {
     font-size: 16px;
+    font-family: Spartan;
     color: red,
 }
