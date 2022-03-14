@@ -1,25 +1,35 @@
+/* Custom Fonts */
 @font-face {
-    font-family: 'Spartan';
-    src: url(/Fonts/Spartan-Regular.ttf);
+    font-family: Spartan;
+    src: url(Fonts/Spartan-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'Spartan-Bold';
-    src: url(/Fonts/Spartan-Bold.ttf);
+    font-family: Spartan-Bold;
+    src: url(Fonts/Spartan-Bold.ttf);
     font-weight: bold;
 }
 
+/* Body */
+body {
+    font-family: Spartan;
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+/* Elements */
 h1 {
     font-family: Spartan-Bold;
-    font-size: 24px,
+    font-size: 32px;
+    text-align: center;
 }
 
 h2 {
-    font-size: 20px,
+    font-size: 24px;
+    text-align: center;
 }
 
 p {
     font-size: 16px;
-    font-family: Spartan;
-    color: red,
+    text-align: justify;
 }
