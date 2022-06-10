@@ -15,6 +15,7 @@
     font-family: Spartan;
     overflow: hidden;
     background-color:rgb(24, 24, 27);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     width: 100%;
     border-width: 6px;
   }
@@ -35,7 +36,6 @@
     transition: all 0.2s linear;
   }
   
-  /* Change the background color on mouse-over */
   .header a:hover {
     background-color: rgb(180, 180, 180);
     color: black;
@@ -43,13 +43,11 @@
     transition: all 0.2s linear;
   }
   
-  /* Style the active/current link*/
   .header a.active {
     background-color: dodgerblue;
     color: white;
   }
   
-  /* Float the link section to the right */
   .header-right {
     float: right;
   }
@@ -58,8 +56,7 @@
       float: left;
   }
   
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
     .header a {
       float: none;
       display: block;
@@ -80,14 +77,13 @@ body {
 .Info-Box {
     margin: auto;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
-    width: 35%;
-    height: 45%;
-    margin-top: 10%;
+    width: 50%;
+    margin-top: 1%;
     border-radius: 3px;
     background-color:rgb(24, 24, 27);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     /* Info Box Elements */
@@ -108,7 +104,13 @@ body {
         word-spacing: 2px;
     }
 
-    .Info-Box a {
+    @media screen and (max-width: 1500px) {
+        .Info-Box {
+            width: 500px;
+        }
+    }
+
+.InfoButton {
     align-self: center;
     color: white;
     background-color: rgb(24, 24, 27);
@@ -120,27 +122,38 @@ body {
     width: 90%;
     border-radius: 4px;
     margin: 10px;
-
     transition: all 0.2s linear;
-    }
-    
-  
-    /* Change the background color on mouse-over */
-    .Info-Box a:hover {
+}
+
+.InfoButton:hover {
     background-color: rgb(180, 180, 180);
     color: black;
     font-size: 20px;
     transition: all 0.2s linear;
-    }
-
-
-    @media screen and (max-width: 1500px) {
-        .Info-Box {
-            width: 500px;
-        }
-    }
+}
 
 /* Project displays */
+
+.Projects {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+
+.Project {
+    width: 100%;
+    height: 50%;
+}
+
+@media screen and (max-width: 1110px) {
+    .Projects {
+        flex-direction: column;
+    }
+}
+
+/* Project Display Box */
 .Project-Box {
     margin: auto;
     display: flex;
@@ -148,16 +161,19 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 30%;
+    width: 90%;
     height: 80%;
     margin-top: 5%;
+    margin-bottom: 5%;
     border-radius: 3px;
     }
 
     .Project-Title {
         display: flex;
-        width: 500px;
+        width: 100%;
         text-align: left;
+        justify-content: center;
+        align-items: center;
     }
 
     .Project-Icon {
@@ -165,6 +181,7 @@ body {
         height: 50px;
         float: left;
         align-self: center;
+        margin-right: 5px;
     }
 
     .Project-Box h1 {
@@ -187,6 +204,7 @@ body {
         align-self: center;
         color: white;
         background-color: rgb(24, 24, 27);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         text-align: center;
         padding: 12px;
         text-decoration: none;
@@ -199,8 +217,23 @@ body {
         transition: all 0.2s linear;
         }
         
+        .Project-Box button {
+            align-self: center;
+            color: white;
+            background-color: rgb(24, 24, 27);
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 20px;
+            width: 500px;
+            border-radius: 4px;
+            margin: 10px;
+        
+            transition: all 0.2s linear;
+            }
+
       
-    /* Change the background color on mouse-over */
     .Project-Box a:hover {
         background-color: rgb(180, 180, 180);
         color: black;
@@ -208,37 +241,87 @@ body {
         transition: all 0.2s linear;
         }
 
-    @media screen and (max-width: 700px) {
-        .Project-Box h1 {
-            width: 500px;
-        }
-    }
+        .Project-Box button:hover {
+            background-color: rgb(180, 180, 180);
+            color: black;
+            font-size: 20px;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            }
 
-.footer {
-    position: absolute;
-    right: 1%;
-    bottom: 2%;
-    text-align: right;
-    }
+.video {
+    width: 500px;
+    height: 300px;
+}
 
-    .footer a {
-        color: white;
-        text-align: center;
-        padding: 10px;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 20px;
-        width: 500px;
-        border-radius: 4px;
-    
-        transition: all 0.2s linear;
-    }
+.card {
+    margin: auto;
+    background-color: rgb(24, 24, 27);
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 2rem;
+    max-width: 100%;
+    margin-top: 10px;
+}
 
-    .footer a:hover {
-        background-color: rgb(180, 180, 180);
-        color: black;
-        transition: all 0.2s linear;
-    }
+.avatar {
+    border-radius: 50%;
+    box-shadow: 0 0 16px black;
+    height: 150px;
+    width: 150px;
+}
+
+.user-info {
+    font-family: Spartan;
+    color: #eee;
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    font-family: Spartan-Bold;
+    margin-top: 0;
+}
+
+.user-info ul {
+    font-family: Spartan;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    font-family: Spartan;
+    background-color: rgb(15, 14, 23);
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+.repo:hover {
+    background-color: rgb(180, 180, 180);
+    color: black;
+    font-size: 0.75rem;
+    transition: all 0.2s linear;
+}
 
 /* MISC */
 .Warning-Link:hover:before {
