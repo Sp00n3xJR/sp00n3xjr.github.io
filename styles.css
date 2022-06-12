@@ -15,7 +15,7 @@
     font-family: Spartan;
     overflow: hidden;
     background-color:rgb(24, 24, 27);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     width: 100%;
     border-width: 6px;
   }
@@ -27,8 +27,7 @@
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
     width: 200px;
     border-radius: 4px;
     margin: 10px;
@@ -38,14 +37,19 @@
   
   .header a:hover {
     background-color: rgb(180, 180, 180);
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
     color: black;
-    font-size: 20px;
     transition: all 0.2s linear;
   }
   
   .header a.active {
     background-color: dodgerblue;
+    box-shadow: 0 0px 10px dodgerblue;
     color: white;
+  }
+
+  .header a.active:hover {
+    box-shadow: 0 0px 10px dodgerblue;
   }
   
   .header-right {
@@ -58,12 +62,8 @@
   
   @media screen and (max-width: 750px) {
     .header a {
-      float: none;
       display: block;
       text-align: left;
-    }
-    .header-right {
-      float: none;
     }
 }
 
@@ -75,65 +75,77 @@ body {
 
 /* Text Info Box */
 .Info-Box {
-    margin: auto;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 50%;
+    width: 100%;
     margin-top: 1%;
     border-radius: 3px;
     background-color:rgb(24, 24, 27);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
     }
 
     /* Info Box Elements */
     .Info-Box h1 {
+        padding-left: 2rem;
+        margin-right: 2rem;
         color: white;
         font-family: Spartan-Bold;
         font-size: 24px;
     }
 
     .Info-Box h2 {
+        padding-left: 2rem;
+        margin-right: 2rem;
         color: white;
-        font-size: 22px;
+        font-family: Spartan-Bold;
+        font-size: 20px;
     }
 
     .Info-Box p {
+        font-family: Spartan;
+        text-align: justify;
         color: white;
-        font-size: 20px;
-        word-spacing: 2px;
-    }
-
-    @media screen and (max-width: 1500px) {
-        .Info-Box {
-            width: 500px;
-        }
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
 .InfoButton {
-    align-self: center;
+    display: flex;
+    font-family: Spartan;
+    background-color: rgb(15, 14, 23);
+    border-radius: 3px;
     color: white;
-    background-color: rgb(24, 24, 27);
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
     font-size: 18px;
-    line-height: 20px;
-    width: 90%;
-    border-radius: 4px;
-    margin: 10px;
+    padding: 0.3rem 0.3rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
     transition: all 0.2s linear;
 }
 
 .InfoButton:hover {
     background-color: rgb(180, 180, 180);
     color: black;
-    font-size: 20px;
+    box-shadow: 0 0px 5px rgba(255, 255, 255, 0.5);
     transition: all 0.2s linear;
 }
 
-/* Project displays */
+.link-icon {
+    position: absolute;
+    right: 25px;
+    width: 24px;
+    height: 24px;
+}
 
+.header-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+/* Project displays */
 .Projects {
     display: flex;
     width: 80%;
@@ -204,10 +216,11 @@ body {
         align-self: center;
         color: white;
         background-color: rgb(24, 24, 27);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         text-align: center;
         padding: 12px;
         text-decoration: none;
+        font-family: Spartan;
         font-size: 18px;
         line-height: 20px;
         width: 500px;
@@ -236,6 +249,7 @@ body {
       
     .Project-Box a:hover {
         background-color: rgb(180, 180, 180);
+        box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5);
         color: black;
         font-size: 20px;
         transition: all 0.2s linear;
@@ -255,10 +269,9 @@ body {
 }
 
 .card {
-    margin: auto;
     background-color: rgb(24, 24, 27);
     border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     padding: 2rem;
     max-width: 100%;
@@ -266,7 +279,7 @@ body {
 }
 
 .avatar {
-    border-radius: 50%;
+    border-radius: 100%;
     box-shadow: 0 0 16px black;
     height: 150px;
     width: 150px;
@@ -319,13 +332,13 @@ body {
 .repo:hover {
     background-color: rgb(180, 180, 180);
     color: black;
+    box-shadow: 0 0px 5px rgba(255, 255, 255, 0.5);
     font-size: 0.75rem;
     transition: all 0.2s linear;
 }
 
-/* MISC */
-.Warning-Link:hover:before {
-    color: rgb(145, 49, 49);
-    white-space: nowrap;
-    content: "(BUSINESS INQUIRIES ONLY) ";
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
